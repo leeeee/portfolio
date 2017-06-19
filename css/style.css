@@ -93,6 +93,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 100%;
   font: 'Roboto Mono','Montserrat', Microsoft YaHei, Microsoft JhengHei, sans-serif;
   vertical-align: baseline;
+  -webkit-font-smoothing: antialiased; /*chrome、safari*/
+  -moz-osx-font-smoothing: grayscale;/*firefox*/
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -245,6 +247,7 @@ a {
 /*main*/
 
 #content-block {
+  background-color: #ddd;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -622,8 +625,8 @@ body.mobile .fixed-background {
   color: #333;
   font-weight: 700;
   font-family: 'Roboto Mono', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", "Helvetica", PingFang SC, PingFang TC, "Noto Sans CJK SC", Hiragino Sans GB, STHeiti, Microsoft YaHei, Microsoft JhengHei, sans-serif;
-  word-spacing: 4px;
-  letter-spacing: 1px;
+  word-spacing: 2px;
+  letter-spacing: 0px;
 }
 .sa.light h1, .sa.light .h1, .h1.light, .sa.light h2, .sa.light .h2, .h2.light, .sa.light h3, .sa.light .h3, .h3.light, .sa.light h4, .sa.light .h4, .h4.light, .sa.light h5, .sa.light .h5, .h5.light, .sa.light h6, .sa.light .h6, .h6.light {
   color: #fff;
@@ -640,7 +643,7 @@ body.mobile .fixed-background {
 }
 .sa h2, .h2 {
   font-size: 72px;
-  line-height: 1.11em;
+  line-height: 1.2em;
 }
 .sa h3, .h3 {
   font-size: 36px;
@@ -1023,13 +1026,13 @@ textarea.simple-input {
   background-repeat: no-repeat;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  background-position: -100000px 0;
-  background-size: 100000px 1.15em;
+  background-position: -100000px 17px;
+  background-size: 100000px 0.8em;
 }
 .ht-1:hover {
   -webkit-transition: all 60s ease-out;
   transition: all 60s ease-out;
-  background-position: 0 0;
+  background-position: 0 17px;
 }
 .ht-2 {
   background: -moz-linear-gradient(left, currentColor 0%, currentColor 100%);
@@ -1884,7 +1887,7 @@ header .cart-label {
   }
 
   header.type-3+#content-block {
-    margin-top: 77px;
+    margin-top: 0px;
   }
 
   header.type-3 #logo {
@@ -4590,7 +4593,11 @@ div.post-about,div.content-about{
 
 /*index 3*/
 .slider-3 {
-  position: relative;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
   overflow: hidden;
 }
 .slice-slider-container {
@@ -4632,7 +4639,7 @@ div.post-about,div.content-about{
 }
 .slice-slider-right-column {
   left: auto;
-  right: 0;
+  right: -80px;
 }
 .slice-slider-wrapper {
   position: relative;
@@ -4673,8 +4680,10 @@ div.post-about,div.content-about{
   top: 40px;
   right: 50px;
   bottom: 40px;
+  margin-top: 120px;
 }
 .slice-slider-align-2 .preview {
+  display: none;
   position: absolute;
   left: 100px;
   top: 100px;
@@ -4756,7 +4765,7 @@ div.post-about,div.content-about{
 }
 @media (min-width: 992px) {
   .slice-slider-align-2 .title {
-    font-size: 2.7rem;
+    font-size: 2.4rem;
   }
 }
 .slice-slider-align-2 .title {

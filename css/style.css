@@ -247,7 +247,6 @@ a {
 /*main*/
 
 #content-block {
-  background-color: #ddd;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -625,7 +624,7 @@ body.mobile .fixed-background {
   color: #333;
   font-weight: 700;
   font-family: 'Roboto Mono', 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", "Helvetica", PingFang SC, PingFang TC, "Noto Sans CJK SC", Hiragino Sans GB, STHeiti, Microsoft YaHei, Microsoft JhengHei, sans-serif;
-  word-spacing: 2px;
+  word-spacing: 0px;
   letter-spacing: 0px;
 }
 .sa.light h1, .sa.light .h1, .h1.light, .sa.light h2, .sa.light .h2, .h2.light, .sa.light h3, .sa.light .h3, .h3.light, .sa.light h4, .sa.light .h4, .h4.light, .sa.light h5, .sa.light .h5, .h5.light, .sa.light h6, .sa.light .h6, .h6.light {
@@ -1026,7 +1025,7 @@ textarea.simple-input {
   background-repeat: no-repeat;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  background-position: -100000px 17px;
+  background-position: -100000px 19px;
   background-size: 100000px 0.8em;
 }
 .ht-1:hover {
@@ -1767,6 +1766,10 @@ header .cart-label {
   }
 
 
+  header.type-2.transparent+#content-block{
+    margin-top:0;
+  }
+
   header.type-2+#content-block {
     margin-top: 77px;
   }
@@ -1786,9 +1789,19 @@ header .cart-label {
     margin-top: -10px;
   }
 
+  header.type-2.transparent.active .hamburger-icon {
+    color: #fff;
+  }
+
   header.type-2.active .hamburger-icon {
     color: #fff;
   }
+
+
+  header.type-2.transparent .hamburger-icon {
+      color: #fff;
+  }
+
 
   header.type-2 .toggle-menu {
     color: #fff;
@@ -1995,7 +2008,7 @@ header .cart-label {
   }
 
   header.type-2.transparent .hamburger-icon, header.type-3.transparent .hamburger-icon {
-    color: #fff;
+    color: #333;
   }
 
   header.type-2.transparent.scrolled .header-wrapper, header.type-3.transparent.scrolled .header-wrapper {
@@ -2208,11 +2221,11 @@ header .cart-label {
   /*transparent and light header*/
 
   header.type-2.transparent .header-wrapper, header.type-3.transparent .header-wrapper {
-    background: #333;
+    background: #fff;
   }
 
   header.type-2.transparent .hamburger-icon, header.type-3.transparent .hamburger-icon {
-    color: #fff;
+    color: #333;
   }
 }
 
@@ -2262,13 +2275,13 @@ ul. footer-list{
 /*Phones (<768px)*/
 @media (max-width: 767px) {
   .footer-list a{
-    display: block;
+    display: none;
     float: none;
     text-align: center;
   }
 
   ul. footer-list{
-    display: block;
+    display: none;
     position: fixed;
   }
 }
@@ -3494,6 +3507,7 @@ h1.banner{
 
 
 h1#title {
+  padding-top: 2.1rem;
   font-size: 2.1rem;
   font-family: 'Roboto Mono', 'Montserrat', sans-serif;
 }
@@ -3527,12 +3541,13 @@ h1#title {
     font-weight: normal;
   }
   h1#title {
+    margin-top:0rem;
     font-size: 2rem;
     font-family: 'Roboto Mono', 'Montserrat', sans-serif;
   }
   .title {
-    padding-top: 6rem;
-    padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -4592,7 +4607,8 @@ div.post-about,div.content-about{
 @media (max-width: 767px) {}
 
 /*index 3*/
-.slider-3 {
+
+/*.slider-3 {
   position: fixed;
   left: 0;
   width: 100%;
@@ -4600,6 +4616,13 @@ div.post-about,div.content-about{
   margin-top: 0;
   overflow: hidden;
 }
+*/
+
+.slider-3 {
+  position: relative;
+  overflow: hidden;
+}
+
 .slice-slider-container {
   position: absolute;
   left: 75px;
@@ -4766,6 +4789,10 @@ div.post-about,div.content-about{
 @media (min-width: 992px) {
   .slice-slider-align-2 .title {
     font-size: 2.4rem;
+  }
+
+  .slice-slider-align-2 {
+    margin-top: 20px;
   }
 }
 .slice-slider-align-2 .title {
@@ -4944,7 +4971,12 @@ div.post-about,div.content-about{
 }
 
 /*Phones (<768px)*/
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+  .slice-slider-align-2 {
+    margin-top: 20px;
+  }
+
+}
 
 /*index 1*/
 .slider-1 .swiper-slide {

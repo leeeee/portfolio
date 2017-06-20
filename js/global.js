@@ -106,8 +106,8 @@ $(function() {
 		return (swiper.is('[data-'+dataValue+']'))?parseInt(swiper.data(dataValue), 10):returnValue;
 	}
 	_functions.initSwiper = function(){
-		$('.swiper-container').not('.initialized').each(function(){								  
-			var $t = $(this);	
+		$('.swiper-container').not('.initialized').each(function(){
+			var $t = $(this);
 
 			var index = 'swiper-unique-id-'+initIterator;
 

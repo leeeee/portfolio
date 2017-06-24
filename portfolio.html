@@ -15,31 +15,34 @@
 	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
 	<link rel="shortcut icon" href="img/favicon.ico" />
-	<title>IVY</title>
+	<title>Rockly.im</title>
 </head>
 
 <body>
 
-	<!-- LOADER -->
-	<div id="loader-wrapper"></div>
+	<!-- Preloader -->
+	<div id="preloader">
+			<div class="pre-container">
+					<div class="spinner">
+							<div class="double-bounce1"></div>
+							<div class="double-bounce2"></div>
+					</div>
+			</div>
+	</div>
+	<!-- end Preloader -->
 
 	<!-- HEADER -->
 	<header class="type-2 transparent">
 		<div class="header-wrapper">
-			<a id="logo" href="index1.html"><img src="img/logo.png" alt="" /></a>
+			<a id="logo" href="index.html"><img src="img/logo.png" alt="" /></a>
 			<div class="hamburger-icon">
 				<span></span>
 				<span></span>
 				<span></span>
 				<span></span>
 			</div>
-			<div class="follow style-1">
-				<a class="entry" href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
-				<a class="entry" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a>
-				<a class="entry" href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
-				<a class="entry" href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a>
-			</div>
 		</div>
+
 		<div class="navigation-wrapper">
 			<nav>
 				<ul>
@@ -263,6 +266,7 @@
 	<script src="js/global-2.js"></script>
 	<script src="js/jquery.mousewheel.min.js"></script>
 	<script src="js/sliceslider.jquery.js"></script>
+	<script src="js/custom.js"></script>
 	<script>
 		$(function() {
 			$('.slice-slider-container').sliceSlider({
